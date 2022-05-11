@@ -13,6 +13,7 @@ jobs:
           envkey_POSTGRES_PASSWORD: "123456"
           envkey_POSTGRES_DB: "repo-provas-plus-test"
           envkey_DATABASE_URL: "postgres://postgres:123456@db:5432/repo-provas-plus-test"
+          file_name: .env.test
       - name: Run Tests
         run: docker-compose -f docker-compose-test.yml run node_app_repo-provas-test npm run test
       - name: Build
