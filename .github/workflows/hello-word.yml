@@ -1,0 +1,7 @@
+name: GitHub Actions Hello Word
+on: [push]
+jobs: 
+  Hello-word: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello Word!"
