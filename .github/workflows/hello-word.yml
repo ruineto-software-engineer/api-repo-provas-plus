@@ -8,4 +8,4 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: List workspace files
-        uses: ls ${{ github.workspace }}
+        run: ls ${{ github.workspace }}
