@@ -5,8 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "dotenv -e .env.test npx prisma migrate dev && NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest -i",
     "dev": "nodemon src/server.ts",
-    "test": "dotenv -e .env.test npx prisma migrate dev && NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest -i"
+    "dev:migrate": "npx prisma migrate dev && nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",
