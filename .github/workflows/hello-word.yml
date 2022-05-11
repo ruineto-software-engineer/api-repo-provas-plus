@@ -5,3 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello Word!"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: List workspace files
+        uses: ls ${{ github.workspace }}
