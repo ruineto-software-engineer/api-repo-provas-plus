@@ -9,6 +9,7 @@ describe("Integration Tests", () => {
       await prisma.$executeRaw`TRUNCATE TABLE users;`;
     });
 
+    //"should persist the user given a valid body"
     it("should persist the user given a valid body", async () => {
       const user: CreateUserData = {
         email: "fulaninho@email.com",
